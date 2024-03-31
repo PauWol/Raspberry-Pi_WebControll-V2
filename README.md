@@ -1,42 +1,48 @@
-# HackBerry-Pi: A Raspberry Pi Zero 2 W Cybersecurity Toolkit
+# RaspberryPi-Webcontroll: Effortless Control via Wi-Fi
 
-Inspired by the legendary WiFi Pineapple and the versatile USB Rubber Ducky, HackBerry-Pi empowers you to delve into the world of penetration testing for Windows PCs and Wi-Fi infrastructure. Built on the compact and powerful Raspberry Pi Zero 2 W, this project provides a portable and user-friendly platform to enhance your security expertise.
+Take command of your Raspberry Pi Zero 2 W through the power of your web browser! This project empowers you to configure and control your Pi remotely, leveraging the built-in Wi-Fi capabilities. Whether you're using a Raspberry Pi Zero 2 W, a different Wi-Fi-enabled Raspberry Pi model, or even a Linux-based system with Wi-Fi (Debian-based preferred), RaspberryPi-Webcontroll provides a convenient and flexible solution.
 
 ## Requirements:
 
-- Raspberry Pi Zero 2 W
-- External USB Wi-Fi antenna (compatible with Raspberry Pi Zero 2 W and supporting monitor mode im using a brostrend)
-- Micro-B male to 2x USB-A female splitter cable
-- SD card (minimum 8GB)
-- Standard USB-A male to USB-A male cable
+- Raspberry Pi:
+  - Raspberry Pi Zero 2 W (recommended)
+  - Other Raspberry Pi models with Wi-Fi capabilities
+- Or, a Linux-based system with Wi-Fi (Debian-based preferred)
 
 ## Getting Started (Simple Steps):
 
-### 1. Download the HackBerry-Pi Image:
+1. **Download the Latest Release:**
+   - Head over to the project's releases section to grab the latest ZIP file containing the `web_control` directory and its dependencies.
 
-Head over to the project's releases section to grab the latest image file specifically designed for HackBerry-Pi.
+2. **Unpack and Navigate:**
+   - Extract the downloaded ZIP file to your desired location on your Raspberry Pi. Open a terminal window and navigate to the unzipped `web_control` directory using the `cd` command.
 
-### 2. Flash the Image:
+3. **Install Dependencies:**
+   - Some additional software components are required for RaspberryPi-Webcontroll to function. To install them, run the following command in your terminal (you might need root privileges):
 
-Utilize a user-friendly tool like Raspberry Pi Imager or Balena Etcher to effortlessly flash the downloaded image onto your SD card. This process prepares the SD card to boot your Raspberry Pi with the HackBerry-Pi software pre-installed.
+     ```
+     pip install -r requirements.txt
+     ```
 
-### 3. Power Up Your HackBerry-Pi:
+4. **Start the Web Server:**
+   - With the dependencies in place, it's time to launch the web server! Execute the following command in your terminal from within the `web_control` directory:
 
-Insert the flashed SD card into your Raspberry Pi Zero 2 W, connect the necessary peripherals (external Wi-Fi antenna, splitter cable, and power supply), and boot it up.
+     ```
+     ./app.py
+     ```
 
-### 4. Connect to the Raspberry Pi's Wi-Fi:
+   This will start the web server, allowing you to access the control interface remotely.
 
-By default, the Raspberry Pi will create its own Wi-Fi network `HB_Pi` upon booting. To connect your device to this network, use the pre-configured password: `HB_Pi_1234` (remember to change this password for enhanced security after the initial setup).
+5. **Optional: Automatic Startup (Raspberry Pi Zero 2 W):**
+   - To automatically start the web server whenever your Raspberry Pi boots (this functionality might not be available on all Raspberry Pi models), you can use the cron job functionality. Refer to the project documentation for detailed instructions on configuring automatic startup.
 
-### 5. Configure Your HackBerry-Pi:
+## Accessing the Web Interface:
 
-You have the flexibility to configure your HackBerry-Pi using two convenient methods:
+- Once the web server is running, you can access the control interface from any device on your network by opening a web browser and navigating to the IP address of your Raspberry Pi followed by the default port (usually 80). For example, if your Pi's IP address is `192.168.1.100`, you would visit [http://192.168.1.100/](http://192.168.1.100/). The exact port number might be different; refer to the project documentation for more details.
 
-- **Secure Shell (SSH):** Establish a secure remote connection from another computer on your network using SSH credentials provided in the project documentation.
-- **Web Interface:** Open a web browser on your connected device and navigate to [http://raspberrypi](http://raspberrypi) to access the web-based configuration interface.
+## Remember:
 
-## Additional Notes:
+- For detailed instructions, advanced configuration options, and troubleshooting guidance, kindly refer to the project's comprehensive documentation (link to be provided).
+- Secure your Raspberry Pi by setting a strong password for the web interface.
 
-- For detailed instructions, comprehensive configuration options, and security best practices, kindly refer to the project's comprehensive documentation ([Link to Documentation Here]).
-- Remember to customize the default password (`secrets_file`) after the initial setup to safeguard your HackBerry-Pi.
-- Embrace the world of ethical hacking with HackBerry-Pi!
+With RaspberryPi-Webcontroll, managing your Raspberry Pi becomes a breeze!
