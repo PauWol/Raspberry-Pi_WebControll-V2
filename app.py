@@ -31,8 +31,8 @@ users = {
 
 infos =  {
     'wifi':[{
-        "Address": "D8:3A:DD:C6:07:D8",
-        "ESSID": "HB_Pi",
+        "Address": "xx:xx:xx:xx:xx:xx",
+        "ESSID": "HB",
         "Protocol": "IEEE 802.11bgn",
         "Mode": "Master",
         "Frequency": "2.442",
@@ -42,8 +42,8 @@ infos =  {
         "Signal level": "67/100"
     },
     {
-        "Address": "34:81:C4:0F:21:81",
-        "ESSID": "homenet",
+        "Address": "xx:xx:xx:xx:xx:xx",
+        "ESSID": "home",
         "Protocol": "IEEE 802.11bgn",
         "Mode": "Master",
         "Frequency": "2.437",
@@ -53,8 +53,8 @@ infos =  {
         "Signal level": "54/100"
     },
     {
-        "Address": "E8:DF:70:E1:A7:CC",
-        "ESSID": "homenet",
+        "Address": "xx:xx:xx:xx:xx:xx",
+        "ESSID": "homt",
         "Protocol": "IEEE 802.11bgn",
         "Mode": "Master",
         "Frequency": "2.437",
@@ -65,45 +65,6 @@ infos =  {
     }
 ],
     'sys':[get_system_info()]
-}
-i= [
-    {
-        "Address": "34:81:C4:0F:21:81",
-        "ESSID": "homenet",
-        "Protocol": "IEEE 802.11bgn",
-        "Mode": "Master",
-        "Frequency": "2.412 GHz",
-        "Channel": "1",
-        "Encryption": "on",
-        "Bit Rates": "144 Mb/s",
-        "Quality": "67/100",
-        "Signal level": "56/100"
-    },
-    {
-        "Address": "E8:DF:70:E1:A7:CC",
-        "ESSID": "homenet",
-        "Protocol": "IEEE 802.11bgn",
-        "Mode": "Master",
-        "Frequency": "2.412 GHz",
-        "Channel": "1",
-        "Encryption": "on",
-        "Bit Rates": "144 Mb/s",
-        "Quality": "86/100",
-        "Signal level": "25/100"
-    },
-    {
-        "Address": "AC:6F:BB:D9:81:20",
-        "ESSID": "MagentaWLAN-K4TV",
-        "Protocol": "IEEE 802.11gn",
-        "Mode": "Master",
-        "Frequency": "2.437 GHz",
-        "Channel": "6",
-        "Encryption": "on",
-        "Bit Rates": "300 Mb/s",
-        "Quality": "100/100",
-        "Signal level": "18/100"
-    }
-]
 #print(info['sys'][0]['host'])
 @login_manager.user_loader
 def load_user(user_id):
